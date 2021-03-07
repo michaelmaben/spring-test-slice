@@ -21,7 +21,7 @@ public class StudentServiceTest {
     StudentService studentService;
 
     @Test
-    public void testStudentService(){
+    public void testStudentService() throws Exception{
 
         //given
         Student student = studentRepository.save(Student.builder().name("Jeevan").active(true).grade(100).build());

@@ -13,7 +13,7 @@ public class StudentService {
     StudentRepository studentRepository;
 
     @Cacheable("students")
-    public Student getStudentById(Long id) throws RuntimeException{
-        return studentRepository.findById(id).orElseThrow(() -> new RuntimeException("Student not found"));
+    public Student getStudentById(Long id) throws StudentNotFoundException{
+        return studentRepository.findById(id).orElseThrow(() -> new StudentNotFoundException());
     }
 }

@@ -21,7 +21,7 @@ public class StudentCacheTest {
     @MockBean
     private StudentRepository studentRepository;
     @Test
-    public void testGetStudentUsingCache(){
+    public void testGetStudentUsingCache() throws Exception{
         //given
         Long id = 123l;
         given(studentRepository.findById(id)).willReturn(Optional.of(new Student(id, "Jeevan")));
